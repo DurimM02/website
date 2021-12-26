@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+  <html>
+  <head>
+  <title>Welcome To Login Form</title>
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script>
+      function login()
+	{
+		var uname = document.getElementById("email").value;
+		var pwd = document.getElementById("pwd1").value;
+		var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+		if(uname =='')
+		{
+			alert("Ju lutemi shkruani emrin tuaj.");
+		}
+		else if(pwd=='')
+		{
+        	alert("Ju lutemi shkruani password");
+		}
+		else if(!filter.test(uname))
+		{
+			alert("Shkruja nje email valid.");
+		}
+		else if(pwd.length < 6 || pwd.length > 12)
+		{
+			alert("Password min gjatsi eshte 6.");
+		}
+		else
+		{
+	alert('Faleminderit per login, jeni duke u drejtuar te faqja kryesore You for Login & You are Redirecting to Campuslife Website');
+  //Redirecting to other page or webste code or you can set your own html page.
+       window.location = "index.html";
+			}
+	}
+  </script>
+  </head>
+
+	<body>
+        <nav>
+    
+            <div><img src="images/logo.png" alt="My logo" width="200px"></div>
+            
+            <div class="nav">
+				<a href="index.html">Home</a>
+				<a href="catalog.html">Katalogu</a>
+				<a href="info.html">Info</a>
+            </div>
+        </nav >
+         
+	<section class="login">
+	<div id="main">
+	<div class="h-tag">
+	<h2>Mirsevini</h2>
+	</div>
+	<!-- Login box -->
+	<div class="login">
+	<table cellspacing="2" align="center" cellpadding="8" border="0">
+	<tr>
+	<td>Username :</td>
+	<td><input type="text" placeholder="Username" id="email" class="tb" /></td>
+	</tr>
+	<tr>
+	<td>Password :</td>
+	<td><input type="password" placeholder="Password " id="pwd1" class="tb" /></td>
+	</tr>
+	<tr>
+	<td></td>
+	<td>
+	<input type="submit" value="Fshij" class="btn" />
+	<input type="submit" value="Login" class="btn" onClick="login()" /></td>
+	</tr>
+	</table>
+    <p>Nuk keni account?<a href="Register.html">Regjistrohu</a></p>
+	</div>
+  	 <!-- login box div ending here.. -->
+	</div>
+	<!-- Main div ending here... -->
+</section>
+    
+  </body>
+  </html>
+ 
